@@ -1,0 +1,6 @@
+framework module Pods_riceServeryAppUITests {
+  umbrella header "Pods-riceServeryAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

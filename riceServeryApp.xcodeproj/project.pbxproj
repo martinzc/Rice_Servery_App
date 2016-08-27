@@ -1,0 +1,743 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30A30272F9C16FE805DEADA3 /* Pods_riceServeryAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC7A92E01144D66F6DB99B20 /* Pods_riceServeryAppUITests.framework */; };
+		414158C1461DA79C68278D4C /* Pods_riceServeryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7DED6569A0D021C424DD51 /* Pods_riceServeryApp.framework */; };
+		A97428311D04888100FDC630 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97428301D04888100FDC630 /* AppDelegate.swift */; };
+		A97428331D04888100FDC630 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97428321D04888100FDC630 /* FirstViewController.swift */; };
+		A97428351D04888100FDC630 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97428341D04888100FDC630 /* SecondViewController.swift */; };
+		A97428381D04888100FDC630 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A97428361D04888100FDC630 /* Main.storyboard */; };
+		A974283A1D04888100FDC630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97428391D04888100FDC630 /* Assets.xcassets */; };
+		A974283D1D04888100FDC630 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A974283B1D04888100FDC630 /* LaunchScreen.storyboard */; };
+		A97428481D04888200FDC630 /* riceServeryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97428471D04888200FDC630 /* riceServeryAppTests.swift */; };
+		A97428531D04888200FDC630 /* riceServeryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97428521D04888200FDC630 /* riceServeryAppUITests.swift */; };
+		A97F7EF01D04922C006B24A4 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F7EEB1D04922C006B24A4 /* ysocket.swift */; };
+		A97F7EF11D04922C006B24A4 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = A97F7EEC1D04922C006B24A4 /* ytcpsocket.c */; };
+		A97F7EF21D04922C006B24A4 /* ytcpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F7EED1D04922C006B24A4 /* ytcpsocket.swift */; };
+		A97F7EF31D04922C006B24A4 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = A97F7EEE1D04922C006B24A4 /* yudpsocket.c */; };
+		A97F7EF41D04922C006B24A4 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F7EEF1D04922C006B24A4 /* yudpsocket.swift */; };
+		A97F7EF61D049242006B24A4 /* serverConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F7EF51D049242006B24A4 /* serverConnection.swift */; };
+		A9ADC4421D1A341B007CB937 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */; };
+		A9ADC4431D1A341B007CB937 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */; };
+		A9ADC4441D1A341B007CB937 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */; };
+		EDC3EB874E36C10D04412EF5 /* Pods_riceServeryAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D6A0A447F537DBA5F08F9 /* Pods_riceServeryAppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A97428441D04888200FDC630 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A97428251D04888100FDC630 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A974282C1D04888100FDC630;
+			remoteInfo = riceServeryApp;
+		};
+		A974284F1D04888200FDC630 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A97428251D04888100FDC630 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A974282C1D04888100FDC630;
+			remoteInfo = riceServeryApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04AC84798CFC6BCE3CE07576 /* Pods-riceServeryAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riceServeryAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-riceServeryAppUITests/Pods-riceServeryAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		452D6A0A447F537DBA5F08F9 /* Pods_riceServeryAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riceServeryAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5657E1D33B317F7831CC453F /* Pods-riceServeryAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riceServeryAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-riceServeryAppTests/Pods-riceServeryAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E88B186FA17032EDDDA0C58 /* Pods-riceServeryAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riceServeryAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-riceServeryAppUITests/Pods-riceServeryAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A974282D1D04888100FDC630 /* riceServeryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = riceServeryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A97428301D04888100FDC630 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A97428321D04888100FDC630 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		A97428341D04888100FDC630 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A97428371D04888100FDC630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A97428391D04888100FDC630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A974283C1D04888100FDC630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A974283E1D04888100FDC630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A97428431D04888200FDC630 /* riceServeryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = riceServeryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A97428471D04888200FDC630 /* riceServeryAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = riceServeryAppTests.swift; sourceTree = "<group>"; };
+		A97428491D04888200FDC630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A974284E1D04888200FDC630 /* riceServeryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = riceServeryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A97428521D04888200FDC630 /* riceServeryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = riceServeryAppUITests.swift; sourceTree = "<group>"; };
+		A97428541D04888200FDC630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A97F7EEB1D04922C006B24A4 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		A97F7EEC1D04922C006B24A4 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		A97F7EED1D04922C006B24A4 /* ytcpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ytcpsocket.swift; sourceTree = "<group>"; };
+		A97F7EEE1D04922C006B24A4 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		A97F7EEF1D04922C006B24A4 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		A97F7EF51D049242006B24A4 /* serverConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serverConnection.swift; sourceTree = "<group>"; };
+		A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A9ADC4451D1A3509007CB937 /* riceServeryApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "riceServeryApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		BA7DED6569A0D021C424DD51 /* Pods_riceServeryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riceServeryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2256CB368FD643DB3310A3 /* Pods-riceServeryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riceServeryApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-riceServeryApp/Pods-riceServeryApp.debug.xcconfig"; sourceTree = "<group>"; };
+		DC7A92E01144D66F6DB99B20 /* Pods_riceServeryAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riceServeryAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB04323160A730DC04074386 /* Pods-riceServeryAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riceServeryAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-riceServeryAppTests/Pods-riceServeryAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		F1BBA08238736A4A80085C1C /* Pods-riceServeryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riceServeryApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-riceServeryApp/Pods-riceServeryApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A974282A1D04888100FDC630 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				414158C1461DA79C68278D4C /* Pods_riceServeryApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A97428401D04888200FDC630 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDC3EB874E36C10D04412EF5 /* Pods_riceServeryAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A974284B1D04888200FDC630 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30A30272F9C16FE805DEADA3 /* Pods_riceServeryAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F9CA315001459DACC052A04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA7DED6569A0D021C424DD51 /* Pods_riceServeryApp.framework */,
+				452D6A0A447F537DBA5F08F9 /* Pods_riceServeryAppTests.framework */,
+				DC7A92E01144D66F6DB99B20 /* Pods_riceServeryAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A97428241D04888100FDC630 = {
+			isa = PBXGroup;
+			children = (
+				A974282F1D04888100FDC630 /* riceServeryApp */,
+				A97428461D04888200FDC630 /* riceServeryAppTests */,
+				A97428511D04888200FDC630 /* riceServeryAppUITests */,
+				A974282E1D04888100FDC630 /* Products */,
+				BA408D2CABAD1E487F8A75B3 /* Pods */,
+				9F9CA315001459DACC052A04 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A974282E1D04888100FDC630 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A974282D1D04888100FDC630 /* riceServeryApp.app */,
+				A97428431D04888200FDC630 /* riceServeryAppTests.xctest */,
+				A974284E1D04888200FDC630 /* riceServeryAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A974282F1D04888100FDC630 /* riceServeryApp */ = {
+			isa = PBXGroup;
+			children = (
+				A97F7EEA1D04922C006B24A4 /* ysocket */,
+				A97428301D04888100FDC630 /* AppDelegate.swift */,
+				A97428321D04888100FDC630 /* FirstViewController.swift */,
+				A97428341D04888100FDC630 /* SecondViewController.swift */,
+				A97F7EF51D049242006B24A4 /* serverConnection.swift */,
+				A97428361D04888100FDC630 /* Main.storyboard */,
+				A97428391D04888100FDC630 /* Assets.xcassets */,
+				A974283B1D04888100FDC630 /* LaunchScreen.storyboard */,
+				A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */,
+				A974283E1D04888100FDC630 /* Info.plist */,
+				A9ADC4451D1A3509007CB937 /* riceServeryApp-Bridging-Header.h */,
+			);
+			path = riceServeryApp;
+			sourceTree = "<group>";
+		};
+		A97428461D04888200FDC630 /* riceServeryAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				A97428471D04888200FDC630 /* riceServeryAppTests.swift */,
+				A97428491D04888200FDC630 /* Info.plist */,
+			);
+			path = riceServeryAppTests;
+			sourceTree = "<group>";
+		};
+		A97428511D04888200FDC630 /* riceServeryAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A97428521D04888200FDC630 /* riceServeryAppUITests.swift */,
+				A97428541D04888200FDC630 /* Info.plist */,
+			);
+			path = riceServeryAppUITests;
+			sourceTree = "<group>";
+		};
+		A97F7EEA1D04922C006B24A4 /* ysocket */ = {
+			isa = PBXGroup;
+			children = (
+				A97F7EEB1D04922C006B24A4 /* ysocket.swift */,
+				A97F7EEC1D04922C006B24A4 /* ytcpsocket.c */,
+				A97F7EED1D04922C006B24A4 /* ytcpsocket.swift */,
+				A97F7EEE1D04922C006B24A4 /* yudpsocket.c */,
+				A97F7EEF1D04922C006B24A4 /* yudpsocket.swift */,
+			);
+			path = ysocket;
+			sourceTree = "<group>";
+		};
+		BA408D2CABAD1E487F8A75B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE2256CB368FD643DB3310A3 /* Pods-riceServeryApp.debug.xcconfig */,
+				F1BBA08238736A4A80085C1C /* Pods-riceServeryApp.release.xcconfig */,
+				5657E1D33B317F7831CC453F /* Pods-riceServeryAppTests.debug.xcconfig */,
+				EB04323160A730DC04074386 /* Pods-riceServeryAppTests.release.xcconfig */,
+				7E88B186FA17032EDDDA0C58 /* Pods-riceServeryAppUITests.debug.xcconfig */,
+				04AC84798CFC6BCE3CE07576 /* Pods-riceServeryAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A974282C1D04888100FDC630 /* riceServeryApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A97428571D04888200FDC630 /* Build configuration list for PBXNativeTarget "riceServeryApp" */;
+			buildPhases = (
+				2090DAF4926D67C4FF5555A3 /* [CP] Check Pods Manifest.lock */,
+				A97428291D04888100FDC630 /* Sources */,
+				A974282A1D04888100FDC630 /* Frameworks */,
+				A974282B1D04888100FDC630 /* Resources */,
+				576FA6E7E5E0FA1FF5F8F973 /* [CP] Embed Pods Frameworks */,
+				36B96BBEC334D9CBB4EBE66D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = riceServeryApp;
+			productName = riceServeryApp;
+			productReference = A974282D1D04888100FDC630 /* riceServeryApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A97428421D04888200FDC630 /* riceServeryAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A974285A1D04888200FDC630 /* Build configuration list for PBXNativeTarget "riceServeryAppTests" */;
+			buildPhases = (
+				46D2738F67AB7861BE0AF63B /* [CP] Check Pods Manifest.lock */,
+				A974283F1D04888200FDC630 /* Sources */,
+				A97428401D04888200FDC630 /* Frameworks */,
+				A97428411D04888200FDC630 /* Resources */,
+				EF5BD5218F69715FE0B09BF8 /* [CP] Embed Pods Frameworks */,
+				0B075243363C4ACF9A5C62A5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A97428451D04888200FDC630 /* PBXTargetDependency */,
+			);
+			name = riceServeryAppTests;
+			productName = riceServeryAppTests;
+			productReference = A97428431D04888200FDC630 /* riceServeryAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A974284D1D04888200FDC630 /* riceServeryAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A974285D1D04888200FDC630 /* Build configuration list for PBXNativeTarget "riceServeryAppUITests" */;
+			buildPhases = (
+				F0ECB939AC020C0A565E34D6 /* [CP] Check Pods Manifest.lock */,
+				A974284A1D04888200FDC630 /* Sources */,
+				A974284B1D04888200FDC630 /* Frameworks */,
+				A974284C1D04888200FDC630 /* Resources */,
+				7D7752B84BB7D8639650E006 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A97428501D04888200FDC630 /* PBXTargetDependency */,
+			);
+			name = riceServeryAppUITests;
+			productName = riceServeryAppUITests;
+			productReference = A974284E1D04888200FDC630 /* riceServeryAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A97428251D04888100FDC630 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Martin Zhou";
+				TargetAttributes = {
+					A974282C1D04888100FDC630 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					A97428421D04888200FDC630 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = A974282C1D04888100FDC630;
+					};
+					A974284D1D04888200FDC630 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = A974282C1D04888100FDC630;
+					};
+				};
+			};
+			buildConfigurationList = A97428281D04888100FDC630 /* Build configuration list for PBXProject "riceServeryApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A97428241D04888100FDC630;
+			productRefGroup = A974282E1D04888100FDC630 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A974282C1D04888100FDC630 /* riceServeryApp */,
+				A97428421D04888200FDC630 /* riceServeryAppTests */,
+				A974284D1D04888200FDC630 /* riceServeryAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A974282B1D04888100FDC630 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A974283D1D04888100FDC630 /* LaunchScreen.storyboard in Resources */,
+				A9ADC4421D1A341B007CB937 /* GoogleService-Info.plist in Resources */,
+				A974283A1D04888100FDC630 /* Assets.xcassets in Resources */,
+				A97428381D04888100FDC630 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A97428411D04888200FDC630 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9ADC4431D1A341B007CB937 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A974284C1D04888200FDC630 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9ADC4441D1A341B007CB937 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B075243363C4ACF9A5C62A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-riceServeryAppTests/Pods-riceServeryAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2090DAF4926D67C4FF5555A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		36B96BBEC334D9CBB4EBE66D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-riceServeryApp/Pods-riceServeryApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46D2738F67AB7861BE0AF63B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		576FA6E7E5E0FA1FF5F8F973 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-riceServeryApp/Pods-riceServeryApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D7752B84BB7D8639650E006 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-riceServeryAppUITests/Pods-riceServeryAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF5BD5218F69715FE0B09BF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-riceServeryAppTests/Pods-riceServeryAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0ECB939AC020C0A565E34D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A97428291D04888100FDC630 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A97F7EF21D04922C006B24A4 /* ytcpsocket.swift in Sources */,
+				A97428351D04888100FDC630 /* SecondViewController.swift in Sources */,
+				A97428311D04888100FDC630 /* AppDelegate.swift in Sources */,
+				A97F7EF01D04922C006B24A4 /* ysocket.swift in Sources */,
+				A97F7EF61D049242006B24A4 /* serverConnection.swift in Sources */,
+				A97428331D04888100FDC630 /* FirstViewController.swift in Sources */,
+				A97F7EF11D04922C006B24A4 /* ytcpsocket.c in Sources */,
+				A97F7EF41D04922C006B24A4 /* yudpsocket.swift in Sources */,
+				A97F7EF31D04922C006B24A4 /* yudpsocket.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A974283F1D04888200FDC630 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A97428481D04888200FDC630 /* riceServeryAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A974284A1D04888200FDC630 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A97428531D04888200FDC630 /* riceServeryAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A97428451D04888200FDC630 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A974282C1D04888100FDC630 /* riceServeryApp */;
+			targetProxy = A97428441D04888200FDC630 /* PBXContainerItemProxy */;
+		};
+		A97428501D04888200FDC630 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A974282C1D04888100FDC630 /* riceServeryApp */;
+			targetProxy = A974284F1D04888200FDC630 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A97428361D04888100FDC630 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A97428371D04888100FDC630 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A974283B1D04888100FDC630 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A974283C1D04888100FDC630 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A97428551D04888200FDC630 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A97428561D04888200FDC630 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A97428581D04888200FDC630 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE2256CB368FD643DB3310A3 /* Pods-riceServeryApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = riceServeryApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinzhou.riceServeryApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "riceServeryApp/riceServeryApp-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		A97428591D04888200FDC630 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1BBA08238736A4A80085C1C /* Pods-riceServeryApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = riceServeryApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinzhou.riceServeryApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "riceServeryApp/riceServeryApp-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		A974285B1D04888200FDC630 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5657E1D33B317F7831CC453F /* Pods-riceServeryAppTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = riceServeryAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinzhou.riceServeryAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "riceServeryApp/riceServeryApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/riceServeryApp.app/riceServeryApp";
+			};
+			name = Debug;
+		};
+		A974285C1D04888200FDC630 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB04323160A730DC04074386 /* Pods-riceServeryAppTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = riceServeryAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinzhou.riceServeryAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "riceServeryApp/riceServeryApp-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/riceServeryApp.app/riceServeryApp";
+			};
+			name = Release;
+		};
+		A974285E1D04888200FDC630 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E88B186FA17032EDDDA0C58 /* Pods-riceServeryAppUITests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = riceServeryAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinzhou.riceServeryAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "riceServeryApp/riceServeryApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_TARGET_NAME = riceServeryApp;
+			};
+			name = Debug;
+		};
+		A974285F1D04888200FDC630 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04AC84798CFC6BCE3CE07576 /* Pods-riceServeryAppUITests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = riceServeryAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.martinzhou.riceServeryAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "riceServeryApp/riceServeryApp-Bridging-Header.h";
+				TEST_TARGET_NAME = riceServeryApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A97428281D04888100FDC630 /* Build configuration list for PBXProject "riceServeryApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A97428551D04888200FDC630 /* Debug */,
+				A97428561D04888200FDC630 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A97428571D04888200FDC630 /* Build configuration list for PBXNativeTarget "riceServeryApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A97428581D04888200FDC630 /* Debug */,
+				A97428591D04888200FDC630 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A974285A1D04888200FDC630 /* Build configuration list for PBXNativeTarget "riceServeryAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A974285B1D04888200FDC630 /* Debug */,
+				A974285C1D04888200FDC630 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A974285D1D04888200FDC630 /* Build configuration list for PBXNativeTarget "riceServeryAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A974285E1D04888200FDC630 /* Debug */,
+				A974285F1D04888200FDC630 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A97428251D04888100FDC630 /* Project object */;
+}
