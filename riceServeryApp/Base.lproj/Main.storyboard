@@ -83,11 +83,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xef-UD-gd8" customClass="GIDSignInButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xef-UD-gd8" customClass="GIDSignInButton">
                                 <rect key="frame" x="180" y="28" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLG-6G-JOz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLG-6G-JOz">
                                 <rect key="frame" x="270" y="215" width="60" height="30"/>
                                 <state key="normal" title="Sign Out"/>
                                 <connections>
@@ -96,6 +96,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xef-UD-gd8" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" symbolic="YES" id="1Nj-Sf-3gk"/>
+                            <constraint firstItem="Xef-UD-gd8" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" constant="180" id="MYW-Y8-pzg"/>
+                            <constraint firstItem="Xef-UD-gd8" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="SsY-IO-rEP"/>
+                            <constraint firstItem="FLG-6G-JOz" firstAttribute="top" secondItem="Xef-UD-gd8" secondAttribute="bottom" constant="59" id="jSO-xg-yib"/>
+                            <constraint firstItem="Xef-UD-gd8" firstAttribute="centerX" secondItem="FLG-6G-JOz" secondAttribute="centerX" id="n31-b1-ctu"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="FLG-6G-JOz" secondAttribute="bottom" constant="306" id="vHu-Zm-Tc8"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Featured" image="second" id="cPa-gy-q4n"/>
                     <connections>
