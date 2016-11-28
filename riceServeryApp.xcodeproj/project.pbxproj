@@ -23,6 +23,8 @@
 		A97F7EF31D04922C006B24A4 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = A97F7EEE1D04922C006B24A4 /* yudpsocket.c */; };
 		A97F7EF41D04922C006B24A4 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F7EEF1D04922C006B24A4 /* yudpsocket.swift */; };
 		A97F7EF61D049242006B24A4 /* serverConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F7EF51D049242006B24A4 /* serverConnection.swift */; };
+		A983D6251DD5672900217C78 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D6241DD5672900217C78 /* SignInViewController.swift */; };
+		A983D6271DD567AC00217C78 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D6261DD567AC00217C78 /* FeaturedViewController.swift */; };
 		A9ADC4421D1A341B007CB937 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */; };
 		A9ADC4431D1A341B007CB937 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */; };
 		A9ADC4441D1A341B007CB937 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */; };
@@ -51,6 +53,7 @@
 		452D6A0A447F537DBA5F08F9 /* Pods_riceServeryAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riceServeryAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5657E1D33B317F7831CC453F /* Pods-riceServeryAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riceServeryAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-riceServeryAppTests/Pods-riceServeryAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E88B186FA17032EDDDA0C58 /* Pods-riceServeryAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riceServeryAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-riceServeryAppUITests/Pods-riceServeryAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A915B3B11DEBFD7900286D3C /* riceServeryApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = riceServeryApp.entitlements; sourceTree = "<group>"; };
 		A974282D1D04888100FDC630 /* riceServeryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = riceServeryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97428301D04888100FDC630 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A97428321D04888100FDC630 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 		A97F7EEE1D04922C006B24A4 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
 		A97F7EEF1D04922C006B24A4 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
 		A97F7EF51D049242006B24A4 /* serverConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serverConnection.swift; sourceTree = "<group>"; };
+		A983D6241DD5672900217C78 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		A983D6261DD567AC00217C78 /* FeaturedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9ADC4451D1A3509007CB937 /* riceServeryApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "riceServeryApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		BA7DED6569A0D021C424DD51 /* Pods_riceServeryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riceServeryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,17 +148,14 @@
 		A974282F1D04888100FDC630 /* riceServeryApp */ = {
 			isa = PBXGroup;
 			children = (
+				A915B3B11DEBFD7900286D3C /* riceServeryApp.entitlements */,
+				A983D6211DD55A6400217C78 /* Supporting Files */,
 				A97F7EEA1D04922C006B24A4 /* ysocket */,
-				A97428301D04888100FDC630 /* AppDelegate.swift */,
+				A97428361D04888100FDC630 /* Main.storyboard */,
 				A97428321D04888100FDC630 /* FirstViewController.swift */,
 				A97428341D04888100FDC630 /* SecondViewController.swift */,
-				A97F7EF51D049242006B24A4 /* serverConnection.swift */,
-				A97428361D04888100FDC630 /* Main.storyboard */,
-				A97428391D04888100FDC630 /* Assets.xcassets */,
-				A974283B1D04888100FDC630 /* LaunchScreen.storyboard */,
-				A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */,
-				A974283E1D04888100FDC630 /* Info.plist */,
-				A9ADC4451D1A3509007CB937 /* riceServeryApp-Bridging-Header.h */,
+				A983D6261DD567AC00217C78 /* FeaturedViewController.swift */,
+				A983D6241DD5672900217C78 /* SignInViewController.swift */,
 			);
 			path = riceServeryApp;
 			sourceTree = "<group>";
@@ -186,6 +188,20 @@
 				A97F7EEF1D04922C006B24A4 /* yudpsocket.swift */,
 			);
 			path = ysocket;
+			sourceTree = "<group>";
+		};
+		A983D6211DD55A6400217C78 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A97428301D04888100FDC630 /* AppDelegate.swift */,
+				A97F7EF51D049242006B24A4 /* serverConnection.swift */,
+				A97428391D04888100FDC630 /* Assets.xcassets */,
+				A974283B1D04888100FDC630 /* LaunchScreen.storyboard */,
+				A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */,
+				A974283E1D04888100FDC630 /* Info.plist */,
+				A9ADC4451D1A3509007CB937 /* riceServeryApp-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		BA408D2CABAD1E487F8A75B3 /* Pods */ = {
@@ -277,6 +293,12 @@
 				TargetAttributes = {
 					A974282C1D04888100FDC630 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 426XA75MF6;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					A97428421D04888200FDC630 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -470,10 +492,12 @@
 				A97428351D04888100FDC630 /* SecondViewController.swift in Sources */,
 				A97428311D04888100FDC630 /* AppDelegate.swift in Sources */,
 				A97F7EF01D04922C006B24A4 /* ysocket.swift in Sources */,
+				A983D6271DD567AC00217C78 /* FeaturedViewController.swift in Sources */,
 				A97F7EF61D049242006B24A4 /* serverConnection.swift in Sources */,
 				A97428331D04888100FDC630 /* FirstViewController.swift in Sources */,
 				A97F7EF11D04922C006B24A4 /* ytcpsocket.c in Sources */,
 				A97F7EF41D04922C006B24A4 /* yudpsocket.swift in Sources */,
+				A983D6251DD5672900217C78 /* SignInViewController.swift in Sources */,
 				A97F7EF31D04922C006B24A4 /* yudpsocket.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,7 +590,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -605,7 +629,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -617,10 +641,15 @@
 			baseConfigurationReference = CE2256CB368FD643DB3310A3 /* Pods-riceServeryApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = riceServeryApp/riceServeryApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = riceServeryApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.martinzhou.riceServeryApp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.rice.comp446.cz16;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "riceServeryApp/riceServeryApp-Bridging-Header.h";
 			};
 			name = Debug;
@@ -630,10 +659,15 @@
 			baseConfigurationReference = F1BBA08238736A4A80085C1C /* Pods-riceServeryApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = riceServeryApp/riceServeryApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = riceServeryApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.martinzhou.riceServeryApp;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.rice.comp446.cz16;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "riceServeryApp/riceServeryApp-Bridging-Header.h";
 			};
 			name = Release;

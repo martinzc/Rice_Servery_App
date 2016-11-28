@@ -54,11 +54,9 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.selectedServery = servery[0]
         self.menu = menu_dict[self.selectedServery]!
         self.tableView.reloadData()
-//        print(self.menu)
         
         
         menuView.didSelectItemAtIndexHandler = {(indexPath: Int) -> () in
-//            print("Did select item at index: \(indexPath)")
             // Change table cell item in this section
             self.selectedServery = servery[indexPath]
             self.menu = self.menu_dict[self.selectedServery]!

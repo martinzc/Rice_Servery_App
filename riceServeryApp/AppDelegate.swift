@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         assert(configureError == nil, "Error configuring Google services: \(configureError)")
         
         GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().signInSilently()
         
         return true
     }
@@ -48,18 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 withError error: NSError!) {
         if (error == nil) {
             // Perform any operations on signed in user here.
-            let userId = user.userID                  // For client-side use only!
-            print("User ID: ", userId)
-            let idToken = user.authentication.idToken // Safe to send to the server
-            print("idToken: ", idToken)
-            let fullName = user.profile.name
-            print("fullName: ", fullName)
-            let givenName = user.profile.givenName
-            print("givenName: ", givenName)
-            let familyName = user.profile.familyName
-            print("familyName: ", familyName)
-            let email = user.profile.email
-            print("email: ", email)
+            print("User signed in")
         } else {
             print("\(error.localizedDescription)")
         }
@@ -70,7 +60,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
                 withError error: NSError!) {
         // Perform any operations when the user disconnects from app here.
-        if (error == nil) { print("User disconnected")
+        if (error == nil) {
+            print("User disconnected")
         } else {
             print("\(error.localizedDescription)")
         }
