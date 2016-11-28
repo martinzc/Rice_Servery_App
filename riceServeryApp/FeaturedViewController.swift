@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeaturedViewController: UIViewController, GIDSignInUIDelegate, UITableViewDelegate, UITableViewDataSource {
+class FeaturedViewController: UIViewController, GIDSignInUIDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     private let strKey = "favDishes"
     private let memory = NSUbiquitousKeyValueStore()
@@ -37,7 +37,7 @@ class FeaturedViewController: UIViewController, GIDSignInUIDelegate, UITableView
     @IBOutlet weak var newFav: UITextField!
     
     @IBAction func addNewFavBtn(sender: AnyObject) {
-        if ((newFav.text) != nil) {
+        if ((newFav.text!) != "") {
             newDish.append(newFav.text!)
             newFav.text = nil
         }
@@ -73,6 +73,15 @@ class FeaturedViewController: UIViewController, GIDSignInUIDelegate, UITableView
             newDish.removeAtIndex(indexPath.row)
         }
         self.tableView.reloadData()
+    }
+    
+    
+    // MARK: UITextFieldDelegate
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
     }
     
     

@@ -12,10 +12,10 @@ import CoreLocation
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
     
-    
+    var selectedRow: Int?
     @IBOutlet weak var tableView: UITableView!
     var menuView: BTNavigationDropdownMenu!
-    var menu = []
+    var menu: [String] = []
     var selectedServery = ""
     var menu_dict = [String: [String]]()
     let refreshControl: UIRefreshControl = UIRefreshControl()
@@ -64,7 +64,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        
         servery.sortInPlace({ distance($0, coordinate: locValue) < distance($1, coordinate: locValue) })
         self.navigationController?.navigationBar.translucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.0/255.0, green:180/255.0, blue:220/255.0, alpha: 1.0)
@@ -124,8 +123,21 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath)
-        cell.textLabel?.text = self.menu[indexPath.row] as? String
+        cell.textLabel?.text = self.menu[indexPath.row] as String
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedRow = indexPath.row
+        self.performSegueWithIdentifier("menuDetailSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "menuDetailSegue" {
+            let destination = segue.destinationViewController as! MenuDetailViewController
+            //            , let indexPath = tableView.indexPathForCell(cell)
+            destination.inDish = self.menu[selectedRow!] as String
+        }
     }
 
 
