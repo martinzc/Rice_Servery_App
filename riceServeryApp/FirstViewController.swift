@@ -31,6 +31,18 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
          "North": (29.721510, -95.396806)
     ]
     
+    private let strKey = "favDishes"
+    private let memory = NSUbiquitousKeyValueStore()
+    var favDishes: [String] {
+        get {
+            if let returnVal = memory.objectForKey(strKey) as? [String] {
+                return returnVal
+            } else {
+                return []
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -44,7 +56,38 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.addSubview(refreshControl)
         
         self.menu_dict = connectAndParse()
+        notify()
         
+    }
+    
+    func notify() {
+        var fav_dict = [String: [String]]()
+        for (individualServery, serveryMenu) in menu_dict {
+            fav_dict[individualServery] = []
+            for dish in serveryMenu {
+                for individualFavDish in favDishes {
+                    if dish.rangeOfString(individualFavDish) != nil {
+                        fav_dict[individualServery]!.append(dish)
+                        break;
+                    }
+                }
+            }
+        }
+        print(fav_dict)
+        var bestServery = ""
+        var mostDishes = []
+        for (individualServery, serveryMenu) in fav_dict {
+            if serveryMenu.count >= mostDishes.count {
+                bestServery = individualServery
+                mostDishes = serveryMenu
+            }
+        }
+        let alertController = UIAlertController(title: "Recommend " + bestServery, message:
+            "Dishes you would like: " +
+                mostDishes.componentsJoinedByString(", "), preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     func setUpLocationManager() {
