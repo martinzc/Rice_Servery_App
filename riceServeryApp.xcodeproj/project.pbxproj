@@ -25,6 +25,7 @@
 		A97F7EF61D049242006B24A4 /* serverConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F7EF51D049242006B24A4 /* serverConnection.swift */; };
 		A983D6251DD5672900217C78 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D6241DD5672900217C78 /* SignInViewController.swift */; };
 		A983D6271DD567AC00217C78 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983D6261DD567AC00217C78 /* FeaturedViewController.swift */; };
+		A99D50E21DEC07A200D1A3F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99D50E11DEC07A200D1A3F8 /* CoreLocation.framework */; };
 		A9ADC4421D1A341B007CB937 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */; };
 		A9ADC4431D1A341B007CB937 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */; };
 		A9ADC4441D1A341B007CB937 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */; };
@@ -76,6 +77,7 @@
 		A97F7EF51D049242006B24A4 /* serverConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serverConnection.swift; sourceTree = "<group>"; };
 		A983D6241DD5672900217C78 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A983D6261DD567AC00217C78 /* FeaturedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
+		A99D50E11DEC07A200D1A3F8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A9ADC4411D1A341B007CB937 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9ADC4451D1A3509007CB937 /* riceServeryApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "riceServeryApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		BA7DED6569A0D021C424DD51 /* Pods_riceServeryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riceServeryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99D50E21DEC07A200D1A3F8 /* CoreLocation.framework in Frameworks */,
 				414158C1461DA79C68278D4C /* Pods_riceServeryApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +119,7 @@
 		9F9CA315001459DACC052A04 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A99D50E11DEC07A200D1A3F8 /* CoreLocation.framework */,
 				BA7DED6569A0D021C424DD51 /* Pods_riceServeryApp.framework */,
 				452D6A0A447F537DBA5F08F9 /* Pods_riceServeryAppTests.framework */,
 				DC7A92E01144D66F6DB99B20 /* Pods_riceServeryAppUITests.framework */,

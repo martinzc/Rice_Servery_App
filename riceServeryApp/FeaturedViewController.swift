@@ -10,13 +10,9 @@ import UIKit
 
 class FeaturedViewController: UIViewController, GIDSignInUIDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    var newDish:[String] = []
-    
-    
-    private let strKey = "recentHistory"
-    private let memory = NSUserDefaults.standardUserDefaults()
-    private let maxNum = 10
-    var value: [String] {
+    private let strKey = "favDishes"
+    private let memory = NSUbiquitousKeyValueStore()
+    var newDish: [String] {
         get {
             if let returnVal = memory.objectForKey(strKey) as? [String] {
                 return returnVal
@@ -26,6 +22,7 @@ class FeaturedViewController: UIViewController, GIDSignInUIDelegate, UITableView
         }
         set {
             memory.setObject(newValue, forKey: strKey)
+            memory.synchronize()
         }
     }
     

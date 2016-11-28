@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 withError error: NSError!) {
         if (error == nil) {
             // Perform any operations on signed in user here.
-            print("User signed in")
+            print("Google User signed in")
         } else {
             print("\(error.localizedDescription)")
         }
