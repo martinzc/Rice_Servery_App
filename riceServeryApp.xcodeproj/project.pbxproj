@@ -30,6 +30,7 @@
 		A99D50E21DEC07A200D1A3F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99D50E11DEC07A200D1A3F8 /* CoreLocation.framework */; };
 		A9FB19B21DED330700E88D9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9FB19B11DED330700E88D9E /* GoogleService-Info.plist */; };
 		A9FB19B41DED342900E88D9E /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9FB19B31DED342900E88D9E /* Social.framework */; };
+		A9FB19B61DED4BF200E88D9E /* EditImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FB19B51DED4BF200E88D9E /* EditImageViewController.swift */; };
 		EDC3EB874E36C10D04412EF5 /* Pods_riceServeryAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D6A0A447F537DBA5F08F9 /* Pods_riceServeryAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		A9FB19AF1DED317200E88D9E /* BTNavigationDropdownMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BTNavigationDropdownMenu.framework; path = "../../../../Library/Developer/Xcode/DerivedData/riceServeryApp-cgyfymsfyukddtdehmslyiugjrcj/Build/Products/Debug-iphonesimulator/BTNavigationDropdownMenu/BTNavigationDropdownMenu.framework"; sourceTree = "<group>"; };
 		A9FB19B11DED330700E88D9E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9FB19B31DED342900E88D9E /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A9FB19B51DED4BF200E88D9E /* EditImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditImageViewController.swift; sourceTree = "<group>"; };
 		BA7DED6569A0D021C424DD51 /* Pods_riceServeryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riceServeryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2256CB368FD643DB3310A3 /* Pods-riceServeryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riceServeryApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-riceServeryApp/Pods-riceServeryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		DC7A92E01144D66F6DB99B20 /* Pods_riceServeryAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riceServeryAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 				A95DC45C1DEC9C9D00A91F0E /* RatingControl.swift */,
 				A97428321D04888100FDC630 /* FirstViewController.swift */,
 				A95DC45E1DECA77C00A91F0E /* MenuDetailViewController.swift */,
+				A9FB19B51DED4BF200E88D9E /* EditImageViewController.swift */,
 				A97428341D04888100FDC630 /* SecondViewController.swift */,
 				A983D6261DD567AC00217C78 /* FeaturedViewController.swift */,
 				A983D6241DD5672900217C78 /* SignInViewController.swift */,
@@ -510,6 +513,7 @@
 				A95DC45F1DECA77C00A91F0E /* MenuDetailViewController.swift in Sources */,
 				A97428331D04888100FDC630 /* FirstViewController.swift in Sources */,
 				A97F7EF11D04922C006B24A4 /* ytcpsocket.c in Sources */,
+				A9FB19B61DED4BF200E88D9E /* EditImageViewController.swift in Sources */,
 				A97F7EF41D04922C006B24A4 /* yudpsocket.swift in Sources */,
 				A983D6251DD5672900217C78 /* SignInViewController.swift in Sources */,
 				A97F7EF31D04922C006B24A4 /* yudpsocket.c in Sources */,

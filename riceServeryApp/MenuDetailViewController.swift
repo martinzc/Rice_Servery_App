@@ -8,6 +8,7 @@
 
 import UIKit
 import Social
+import Photos
 
 class MenuDetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -15,15 +16,24 @@ class MenuDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var ratingControl: RatingControl!
+    var loadedImage:UIImage?
     var inDish: String = ""
     
     @IBAction func commentBtn(sender: AnyObject) {
+        textField.text = ""
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         dishName.text = inDish
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        if (loadedImage != nil) {
+            photoView.image = loadedImage
+        }
     }
 
     @IBAction func selectImageFromLibrary(sender: UITapGestureRecognizer) {
@@ -57,12 +67,15 @@ class MenuDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         // The info dictionary contains multiple representations of the image, and this uses the original.
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         // Set photoImageView to display the selected image.
         photoView.image = selectedImage
+        
+        performSegueWithIdentifier("editImageSegue", sender: self)
         
         // Dismiss the picker.
         dismissViewControllerAnimated(true, completion: nil)
@@ -150,6 +163,13 @@ class MenuDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
         let alertController = UIAlertController(title: "EasyShare", message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
         presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "editImageSegue" {
+            let destination = segue.destinationViewController as! EditImageViewController
+            destination.loadedImage = photoView.image
+        }
     }
     
 }

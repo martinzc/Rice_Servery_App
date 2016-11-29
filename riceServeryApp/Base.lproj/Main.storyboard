@@ -86,7 +86,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I4x-tw-KZD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I4x-tw-KZD">
                                 <rect key="frame" x="20" y="356" width="560" height="30"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -98,7 +98,7 @@
                                     <outlet property="delegate" destination="L5e-QB-EDa" id="nPP-FZ-wkc"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FPo-HV-iX2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FPo-HV-iX2">
                                 <rect key="frame" x="279" y="73" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="4J1-9C-1D0"/>
@@ -108,7 +108,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="px6-I6-qsa">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="px6-I6-qsa">
                                 <rect key="frame" x="276" y="394" width="49" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="da3-NC-Nqs"/>
@@ -118,7 +118,7 @@
                                     <action selector="commentBtn:" destination="L5e-QB-EDa" eventType="touchUpInside" id="HuW-k7-Dcp"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="qwX-i9-irG">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="qwX-i9-irG">
                                 <rect key="frame" x="168" y="102" width="264" height="241"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -128,7 +128,7 @@
                                     <outletCollection property="gestureRecognizers" destination="8Z2-7Q-URy" appends="YES" id="M5s-LN-1ag"/>
                                 </connections>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="btw-CH-0dZ" customClass="RatingControl" customModule="riceServeryApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btw-CH-0dZ" customClass="RatingControl" customModule="riceServeryApp" customModuleProvider="target">
                                 <rect key="frame" x="180" y="432" width="240" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -136,7 +136,7 @@
                                     <constraint firstAttribute="height" constant="44" id="bXa-xV-xLi"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cps-wE-m7C">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cps-wE-m7C">
                                 <rect key="frame" x="280" y="491" width="40" height="30"/>
                                 <state key="normal" title="Share"/>
                                 <connections>
@@ -187,6 +187,7 @@
                         <outlet property="photoView" destination="qwX-i9-irG" id="P5I-Ai-PQG"/>
                         <outlet property="ratingControl" destination="btw-CH-0dZ" id="ET1-dw-Boh"/>
                         <outlet property="textField" destination="I4x-tw-KZD" id="mgH-gi-5co"/>
+                        <segue destination="gyx-0f-gi1" kind="show" identifier="editImageSegue" id="2di-lN-7q1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IfQ-Og-FzE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -197,6 +198,82 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2240" y="-455"/>
+        </scene>
+        <!--Edit Image View Controller-->
+        <scene sceneID="ajY-Jv-NVU">
+            <objects>
+                <viewController id="gyx-0f-gi1" customClass="EditImageViewController" customModule="riceServeryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DP6-Rk-wz4"/>
+                        <viewControllerLayoutGuide type="bottom" id="nhp-03-vd1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6p5-KW-a4I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ztu-p2-ubA">
+                                <rect key="frame" x="156" y="123" width="288" height="318"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rSe-JB-25h">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="258"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="288" id="9Uq-O8-peQ"/>
+                                            <constraint firstAttribute="height" constant="258" id="QMZ-JS-o0l"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdc-Nf-4PD">
+                                        <rect key="frame" x="102.5" y="258" width="83" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="83" id="2U2-sc-BFu"/>
+                                            <constraint firstAttribute="height" constant="30" id="SGz-n5-ARF"/>
+                                        </constraints>
+                                        <state key="normal" title="Surprise Me"/>
+                                        <connections>
+                                            <action selector="surpriseBtn:" destination="gyx-0f-gi1" eventType="touchUpInside" id="wOY-Ht-tFp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGz-6j-Zv5">
+                                        <rect key="frame" x="91" y="288" width="106" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7XA-nL-Hln"/>
+                                            <constraint firstAttribute="width" constant="106" id="uul-Sr-tVB"/>
+                                        </constraints>
+                                        <state key="normal" title="Original Picture"/>
+                                        <connections>
+                                            <action selector="originalBtn:" destination="gyx-0f-gi1" eventType="touchUpInside" id="MOi-V3-zmf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4EC-xq-chF">
+                                <rect key="frame" x="254" y="493" width="92" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="9YL-fx-BQv"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ojk-dp-1rv"/>
+                                </constraints>
+                                <state key="normal" title="Finish Editing"/>
+                                <connections>
+                                    <action selector="finishBtn:" destination="gyx-0f-gi1" eventType="touchUpInside" id="pG7-gg-qaN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ztu-p2-ubA" firstAttribute="centerX" secondItem="6p5-KW-a4I" secondAttribute="centerX" id="4zf-r3-rl4"/>
+                            <constraint firstItem="nhp-03-vd1" firstAttribute="top" secondItem="4EC-xq-chF" secondAttribute="bottom" constant="77" id="Ec5-gf-Sxb"/>
+                            <constraint firstItem="Ztu-p2-ubA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="DP6-Rk-wz4" secondAttribute="bottom" constant="20" id="SWB-p2-AFI"/>
+                            <constraint firstItem="4EC-xq-chF" firstAttribute="top" secondItem="Ztu-p2-ubA" secondAttribute="bottom" constant="52" id="ohL-n6-9jf"/>
+                            <constraint firstItem="Ztu-p2-ubA" firstAttribute="centerX" secondItem="4EC-xq-chF" secondAttribute="centerX" id="q1H-Gs-Iic"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="rSe-JB-25h" id="a4j-Ua-j1b"/>
+                        <segue destination="L5e-QB-EDa" kind="show" identifier="endEditSegue" id="ERq-e9-KLH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGp-Tg-EyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2935" y="-455"/>
         </scene>
         <!--Featured-->
         <scene sceneID="wg7-f3-ORb">
@@ -378,4 +455,7 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ERq-e9-KLH"/>
+    </inferredMetricsTieBreakers>
 </document>
