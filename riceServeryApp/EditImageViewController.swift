@@ -20,31 +20,16 @@ class EditImageViewController: UIViewController {
     
     @IBAction func surpriseBtn(sender: UIButton) {
         
-        guard let image = imageView?.image, cgimg = image.CGImage else {
-            print("imageView doesn't have an image!")
-            return
-        }
+        let coreImage = CIImage(image: imageView!.image!)
         
-        let openGLContext = EAGLContext(API: .OpenGLES2)
-        let context = CIContext(EAGLContext: openGLContext!)
+        let filter = CIFilter(name: "CISepiaTone")
+        filter?.setValue(coreImage, forKey: kCIInputImageKey)
+        filter?.setValue(2, forKey: kCIInputIntensityKey)
         
-        let coreImage = CIImage(CGImage: cgimg)
-        
-        let sepiaFilter = CIFilter(name: "CISepiaTone")
-        sepiaFilter?.setValue(coreImage, forKey: kCIInputImageKey)
-        sepiaFilter?.setValue(1, forKey: kCIInputIntensityKey)
-        
-        if let sepiaOutput = sepiaFilter?.valueForKey(kCIOutputImageKey) as? CIImage {
-            let exposureFilter = CIFilter(name: "CIExposureAdjust")
-            exposureFilter?.setValue(sepiaOutput, forKey: kCIInputImageKey)
-            exposureFilter?.setValue(1, forKey: kCIInputEVKey)
-            
-            if let exposureOutput = exposureFilter?.valueForKey(kCIOutputImageKey) as? CIImage {
-                let output = context.createCGImage(exposureOutput, fromRect: exposureOutput.extent)
-                let result = UIImage(CGImage: output)
-                imageView?.image = result
-            }
-        }
+        let context = CIContext(options: nil)
+        let imageRef = context.createCGImage(filter!.outputImage!, fromRect: coreImage!.extent)
+        imageView?.image = UIImage(CGImage: imageRef)
+    
     }
     
     @IBAction func originalBtn(sender: UIButton) {
@@ -59,6 +44,7 @@ class EditImageViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         originalImage = CGImageCreateCopy(loadedImage!.CGImage)

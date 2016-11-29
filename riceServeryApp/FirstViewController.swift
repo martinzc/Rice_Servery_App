@@ -56,58 +56,14 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.tableView.addSubview(refreshControl)
         
         self.menu_dict = connectAndParse()
+        
+        buildTabBar()
+        
         notify()
         
     }
     
-    func notify() {
-        var fav_dict = [String: [String]]()
-        for (individualServery, serveryMenu) in menu_dict {
-            fav_dict[individualServery] = []
-            for dish in serveryMenu {
-                for individualFavDish in favDishes {
-                    if dish.rangeOfString(individualFavDish) != nil {
-                        fav_dict[individualServery]!.append(dish)
-                        break;
-                    }
-                }
-            }
-        }
-        print(fav_dict)
-        var bestServery = ""
-        var mostDishes = []
-        for (individualServery, serveryMenu) in fav_dict {
-            if serveryMenu.count >= mostDishes.count {
-                bestServery = individualServery
-                mostDishes = serveryMenu
-            }
-        }
-        let alertController = UIAlertController(title: "Recommend " + bestServery, message:
-            "Dishes you would like: " +
-                mostDishes.componentsJoinedByString(", "), preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-        
-        self.presentViewController(alertController, animated: true, completion: nil)
-    }
-    
-    func setUpLocationManager() {
-        // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-        }
-    }
-    
-    func distance(serveryName: String, coordinate: CLLocationCoordinate2D) -> Double {
-        return pow(coordinate.latitude.distanceTo((serveryLocation[serveryName]?.0)!), 2) + pow(coordinate.longitude.distanceTo((serveryLocation[serveryName]?.1)!), 2)
-    }
-    
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        servery.sortInPlace({ distance($0, coordinate: locValue) < distance($1, coordinate: locValue) })
+    func buildTabBar() {
         self.navigationController?.navigationBar.translucent = false
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 0.0/255.0, green:180/255.0, blue:220/255.0, alpha: 1.0)
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
@@ -143,6 +99,57 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         
         self.navigationItem.titleView = menuView
+    }
+    
+    func notify() {
+        var fav_dict = [String: [String]]()
+        for (individualServery, serveryMenu) in menu_dict {
+            fav_dict[individualServery] = []
+            for dish in serveryMenu {
+                for individualFavDish in favDishes {
+                    if dish.rangeOfString(individualFavDish) != nil {
+                        fav_dict[individualServery]!.append(dish)
+                        break;
+                    }
+                }
+            }
+        }
+        var bestServery = ""
+        var mostDishes = []
+        for (individualServery, serveryMenu) in fav_dict {
+            if serveryMenu.count >= mostDishes.count {
+                bestServery = individualServery
+                mostDishes = serveryMenu
+            }
+        }
+        let alertController = UIAlertController(title: "Recommend " + bestServery, message:
+            "Dishes you would like: " +
+                mostDishes.componentsJoinedByString(", "), preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func setUpLocationManager() {
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            print("Authorization granted")
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func distance(serveryName: String, coordinate: CLLocationCoordinate2D) -> Double {
+        return pow(coordinate.latitude.distanceTo((serveryLocation[serveryName]?.0)!), 2) + pow(coordinate.longitude.distanceTo((serveryLocation[serveryName]?.1)!), 2)
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        servery.sortInPlace({ distance($0, coordinate: locValue) < distance($1, coordinate: locValue) })
+        buildTabBar()
 
         manager.stopUpdatingLocation()
     }
