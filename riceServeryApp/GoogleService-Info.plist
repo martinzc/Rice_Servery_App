@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>326054936768-ncm97hi4b5i3jcofd1515mut1hc2lhon.apps.googleusercontent.com</string>
+	<string>204174473916-ief9r3j6bp996i10t9kc1j8f04cpd2jv.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.326054936768-ncm97hi4b5i3jcofd1515mut1hc2lhon</string>
+	<string>com.googleusercontent.apps.204174473916-ief9r3j6bp996i10t9kc1j8f04cpd2jv</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.martinzhou.riceServeryApp</string>
+	<string>edu.rice.comp446.cz16</string>
 	<key>PROJECT_ID</key>
-	<string>rice-servery</string>
+	<string>firebase-riceserveryapp</string>
 	<key>IS_ADS_ENABLED</key>
 	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -23,6 +23,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:326054936768:ios:c8d163ba0034242e</string>
+	<string>1:204174473916:ios:2e42517189340834</string>
 </dict>
 </plist>

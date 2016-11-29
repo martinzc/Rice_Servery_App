@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class MenuDetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -65,6 +66,90 @@ class MenuDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
         
         // Dismiss the picker.
         dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func showShareOptions(sender: AnyObject) {
+        // Dismiss the keyboard if it's visible.
+        if textField.isFirstResponder() {
+            textField.resignFirstResponder()
+        }
+        
+        let actionSheet = UIAlertController(title: "", message: "Share your Note", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        // Configure a new action for sharing the note in Twitter.
+        let tweetAction = UIAlertAction(title: "Share on Twitter", style: UIAlertActionStyle.Default) { (action) -> Void in
+            
+            // Check if sharing to Twitter is possible.
+            if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+                // Initialize the default view controller for sharing the post.
+                let twitterComposeVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+                
+                // Set the note text as the default post message.
+                if self.textField.text!.characters.count <= 140 {
+                    twitterComposeVC.setInitialText("\(self.textField.text!)")
+                }
+                else {
+                    let index = self.textField.text!.startIndex.advancedBy(140)
+                    let subText = self.textField.text!.substringToIndex(index)
+                    twitterComposeVC.setInitialText("\(subText)")
+                }
+                
+                // Display the compose view controller.
+                self.presentViewController(twitterComposeVC, animated: true, completion: nil)
+            }
+            else {
+                self.showAlertMessage("You are not logged in to your Twitter account.")
+            }
+            
+            
+        }
+        
+        
+        // Configure a new action to share on Facebook.
+        let facebookPostAction = UIAlertAction(title: "Share on Facebook", style: UIAlertActionStyle.Default) { (action) -> Void in
+            
+            if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+                let facebookComposeVC = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+                
+                facebookComposeVC.setInitialText("\(self.textField.text!)")
+                
+                self.presentViewController(facebookComposeVC, animated: true, completion: nil)
+            }
+            else {
+                self.showAlertMessage("You are not connected to your Facebook account.")
+            }
+            
+        }
+        
+        // Configure a new action to show the UIActivityViewController
+        let moreAction = UIAlertAction(title: "More", style: UIAlertActionStyle.Default) { (action) -> Void in
+            
+            let activityViewController = UIActivityViewController(activityItems: [self.textField.text!], applicationActivities: nil)
+            
+            activityViewController.excludedActivityTypes = [UIActivityTypeMail]
+            
+            self.presentViewController(activityViewController, animated: true, completion: nil)
+            
+        }
+        
+        
+        let dismissAction = UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel) { (action) -> Void in
+            
+        }
+        
+        
+        actionSheet.addAction(tweetAction)
+        actionSheet.addAction(facebookPostAction)
+        actionSheet.addAction(moreAction)
+        actionSheet.addAction(dismissAction)
+        
+        presentViewController(actionSheet, animated: true, completion: nil)
+    }
+    
+    func showAlertMessage(message: String!) {
+        let alertController = UIAlertController(title: "EasyShare", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+        presentViewController(alertController, animated: true, completion: nil)
     }
     
 }
