@@ -17,7 +17,7 @@ func connectAndParse() -> [String: [String]] {
         // send client data to server
         let (success, errmsg) = client.send(str:"iOS\n" )
         if success {
-            print("Connected to  server")
+            print("Connected to  Menu server")
             // read data from server
             let data: [UInt8]  = client.read(1024 * 10)!
             // convert the data read to string
@@ -40,7 +40,6 @@ func connectAndParse() -> [String: [String]] {
                     }
                 }
                 return menu_dict
-                //                    print(menu_dict)
             } catch {
                 print("error serializing JSON: \(error)")
             }

@@ -8,7 +8,6 @@
 
 import UIKit
 import Social
-import Photos
 
 class MenuDetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -40,13 +39,10 @@ class MenuDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
         // Hide the keyboard.
         textField.resignFirstResponder()
         
-        // UIImagePickerController is a view controller that lets a user pick media from their photo library.
         let imagePickerController = UIImagePickerController()
         
-        // Only allow photos to be picked, not taken.
         imagePickerController.sourceType = .PhotoLibrary
         
-        // Make sure ViewController is notified when the user picks an image.
         imagePickerController.delegate = self
         
         presentViewController(imagePickerController, animated: true, completion: nil)
@@ -69,15 +65,12 @@ class MenuDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
     
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        // The info dictionary contains multiple representations of the image, and this uses the original.
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        // Set photoImageView to display the selected image.
         photoView.image = selectedImage
         
         performSegueWithIdentifier("editImageSegue", sender: self)
         
-        // Dismiss the picker.
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -87,17 +80,14 @@ class MenuDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
             textField.resignFirstResponder()
         }
         
-        let actionSheet = UIAlertController(title: "", message: "Share your Note", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let actionSheet = UIAlertController(title: "", message: "Share your Comment", preferredStyle: UIAlertControllerStyle.ActionSheet)
         
         // Configure a new action for sharing the note in Twitter.
         let tweetAction = UIAlertAction(title: "Share on Twitter", style: UIAlertActionStyle.Default) { (action) -> Void in
             
-            // Check if sharing to Twitter is possible.
             if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
-                // Initialize the default view controller for sharing the post.
                 let twitterComposeVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
                 
-                // Set the note text as the default post message.
                 if self.textField.text!.characters.count <= 140 {
                     twitterComposeVC.setInitialText("\(self.textField.text!)")
                 }
@@ -107,7 +97,6 @@ class MenuDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
                     twitterComposeVC.setInitialText("\(subText)")
                 }
                 
-                // Display the compose view controller.
                 self.presentViewController(twitterComposeVC, animated: true, completion: nil)
             }
             else {
@@ -160,7 +149,7 @@ class MenuDetailViewController: UIViewController, UITextFieldDelegate, UIImagePi
     }
     
     func showAlertMessage(message: String!) {
-        let alertController = UIAlertController(title: "EasyShare", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "RiceServery", message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
         presentViewController(alertController, animated: true, completion: nil)
     }

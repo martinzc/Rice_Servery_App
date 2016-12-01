@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B7D8D94A0269E268DE7B53AEAA09D0904A842FC2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B7D8D94A0269E268DE7B53AEAA09D0904A842FC2" : 0,
+    "66A16BF501F590CB71A9E636546C02DA65235714" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C5D9C5E1-2961-447E-BEA4-79BA511FFB99",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B7D8D94A0269E268DE7B53AEAA09D0904A842FC2" : "cz16_FinalProject_riceServeryApp\/",
+    "66A16BF501F590CB71A9E636546C02DA65235714" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "riceServeryApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "riceServeryApp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/martinzc\/iosApp_Practice.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "66A16BF501F590CB71A9E636546C02DA65235714"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/martinzc\/riceServeryApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B7D8D94A0269E268DE7B53AEAA09D0904A842FC2"
+    }
+  ]
+}

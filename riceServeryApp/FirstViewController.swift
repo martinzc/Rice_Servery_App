@@ -150,7 +150,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         servery.sortInPlace({ distance($0, coordinate: locValue) < distance($1, coordinate: locValue) })
         buildTabBar()
-
+        print(locValue)
         manager.stopUpdatingLocation()
     }
     
@@ -159,11 +159,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.menu = menu_dict[self.selectedServery]!
         self.tableView.reloadData()
         refreshControl.endRefreshing()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

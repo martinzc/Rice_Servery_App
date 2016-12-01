@@ -8,12 +8,12 @@
 import UIKit
 
 @UIApplicationMain
-// [START appdelegate_interfaces]
+
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-    // [END appdelegate_interfaces]
+
     var window: UIWindow?
     
-    // [START didfinishlaunching]
+
     func application(application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Initialize sign-in
@@ -26,16 +26,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         return true
     }
-    // [END didfinishlaunching]
+
     
-    // [START openurl]
+
     func application(application: UIApplication,
                      openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         return GIDSignIn.sharedInstance().handleURL(url,
                                                     sourceApplication: sourceApplication,
                                                     annotation: annotation)
     }
-    // [END openurl]
+
     
     @available(iOS 9.0, *)
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                                                     annotation: options[UIApplicationOpenURLOptionsAnnotationKey])
     }
     
-    // [START signin_handler]
+
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
                 withError error: NSError!) {
         if (error == nil) {
@@ -54,9 +54,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print("\(error.localizedDescription)")
         }
     }
-    // [END signin_handler]
+
     
-    // [START disconnect_handler]
+
     func signIn(signIn: GIDSignIn!, didDisconnectWithUser user:GIDGoogleUser!,
                 withError error: NSError!) {
         // Perform any operations when the user disconnects from app here.
@@ -66,6 +66,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print("\(error.localizedDescription)")
         }
     }
-    // [END disconnect_handler]
+
     
 }

@@ -32,6 +32,13 @@ class EditImageViewController: UIViewController {
     
     }
     
+    @IBAction func saveBnt(sender: UIButton) {
+        UIImageWriteToSavedPhotosAlbum(imageView.image!, self, nil, nil)
+        let alertController = UIAlertController(title: "Success", message: "Image is saved", preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+        presentViewController(alertController, animated: true, completion: nil)
+
+    }
     @IBAction func originalBtn(sender: UIButton) {
         imageView.image = UIImage(CGImage: originalImage!)
     }
@@ -42,13 +49,11 @@ class EditImageViewController: UIViewController {
         navigationController?.popViewControllerAnimated(true)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         originalImage = CGImageCreateCopy(loadedImage!.CGImage)
         imageView.image = loadedImage
     }
+    
 
 }

@@ -164,8 +164,8 @@
 			children = (
 				A915B3B11DEBFD7900286D3C /* riceServeryApp.entitlements */,
 				A983D6211DD55A6400217C78 /* Supporting Files */,
-				A97F7EEA1D04922C006B24A4 /* ysocket */,
 				A97428361D04888100FDC630 /* Main.storyboard */,
+				A97F7EF51D049242006B24A4 /* serverConnection.swift */,
 				A95DC45C1DEC9C9D00A91F0E /* RatingControl.swift */,
 				A97428321D04888100FDC630 /* FirstViewController.swift */,
 				A95DC45E1DECA77C00A91F0E /* MenuDetailViewController.swift */,
@@ -210,8 +210,8 @@
 		A983D6211DD55A6400217C78 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A97F7EEA1D04922C006B24A4 /* ysocket */,
 				A97428301D04888100FDC630 /* AppDelegate.swift */,
-				A97F7EF51D049242006B24A4 /* serverConnection.swift */,
 				A97428391D04888100FDC630 /* Assets.xcassets */,
 				A974283B1D04888100FDC630 /* LaunchScreen.storyboard */,
 				A9FB19B11DED330700E88D9E /* GoogleService-Info.plist */,
